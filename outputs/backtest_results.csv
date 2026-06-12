@@ -1,0 +1,9 @@
+confidence,method,obs,exceptions,expected,kupiec_p,christoffersen_p,coverage_verdict
+95%,Historical,65,9,3.25,0.007,0.472,FAIL
+95%,Normal,65,6,3.25,0.159,0.553,PASS
+95%,Student-t,65,9,3.25,0.007,0.472,FAIL
+95%,GARCH-t,65,8,3.25,0.021,1.0,FAIL
+99%,Historical,65,1,0.65,0.686,,PASS
+99%,Normal,65,1,0.65,0.686,,PASS
+99%,Student-t,65,1,0.65,0.686,,PASS
+99%,GARCH-t,65,1,0.65,0.686,,PASS

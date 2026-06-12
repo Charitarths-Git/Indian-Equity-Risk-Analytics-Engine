@@ -1,0 +1,7 @@
+conf,method,hit_rate_%,target_%,exceptions,kupiec_p,pinball_x1e4,verdict
+95%,Normal,9.23,5.0,6,0.159,11.834,PASS
+95%,GARCH-t,12.31,5.0,8,0.021,11.609,FAIL
+95%,FHS,4.62,5.0,3,0.885,11.121,PASS
+99%,Normal,1.54,1.0,1,0.686,3.088,PASS
+99%,GARCH-t,1.54,1.0,1,0.686,3.113,PASS
+99%,FHS,1.54,1.0,1,0.686,3.055,PASS

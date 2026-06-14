@@ -1,0 +1,30 @@
+
+PORTFOLIO VaR/CVaR  --  SUMMARY  (2026-06-08)
+================================================================
+Portfolio: Rs 1,00,00,000, 15 market-cap-weighted Indian large-caps.
+Sample   : 2018-01-02 -> 2026-06-08  (2082 days)
+Train cut: 2026-03-01   Backtest: 2026-03-02 -> 2026-06-05
+
+TWO INSIGHTS THAT PULL IN OPPOSITE DIRECTIONS
+---------------------------------------------------------------
+1) TODAY (conditional) -- markets are currently CALM (below-average).
+   Next-day GARCH vol forecast 0.83%  vs  1.09% long-run avg.
+   => GARCH-t 1-week 99% VaR  : Rs 4,49,937
+      GARCH-t 1-week 99% CVaR : Rs 5,69,976  (expected loss if the 1% tail hits)
+   Because volatility is low right now, near-term risk sits BELOW its
+   long-run average -- the model is telling you it is a quiet regime.
+
+2) STRUCTURALLY (unconditional) -- the return tail is FAT.
+   excess kurtosis = +17.5, skew = -0.66  (worst day -12.5%, COVID).
+   1-week 99% tail SEVERITY (CVaR):
+      Normal      : Rs 6,33,061
+      Historical  : Rs 10,19,954
+   => A naive Normal model UNDER-STATES the true tail loss by ~38%
+      (and 99% VaR by ~11%). Gaussian risk is dangerously optimistic.
+
+BACKTEST (out-of-sample 2026-03-02 -> 2026-06-05)
+   99% VaR : all methods well-calibrated (1 exception vs 0.65 expected).
+   95% VaR : Normal passed; fat-tailed methods under-covered (the OOS window
+             delivered more moderate down-days than 5%). See backtest_results.csv.
+
+Files: risk_forecast_today.csv, backtest_results.csv, summary_report.txt, *.png
